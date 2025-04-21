@@ -1,0 +1,43 @@
+{% extends 'nav_bar.html' %}
+{% load static  %}
+    {% block extra_css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/table_style.css' %}">
+    {% endblock %}
+
+
+    {% block content %}
+        <h1>Details of the position</h1>
+
+        
+        <table class="styled-table"> 
+            <tr>
+                <th>position</th>
+                <th>department</th>
+                <th>description</th>
+                <th>status</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{i.position}}</td>
+                <td>{{i.department}}</td>
+                <td>{{i.description}}</td>
+                {% if i.is_active %}
+                    <td>active</td>
+                {% else %}
+                    <td>inactive</td>
+                {% endif %}
+                <td>
+                    <a class="btn-update" href="{% url 'update_posi_page' i.id %}">update</a>
+                </td>
+                <td>
+                    <a class="btn-delete" href="{% url 'delete_posi_page' i.id %}">delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+    
+    <a  id ='id1' href="{% url 'create_posi' %}">+</a>
+
+    {% endblock %}

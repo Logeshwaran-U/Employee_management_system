@@ -1,0 +1,28 @@
+{% extends 'nav_bar.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/dashboard_style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="dashboard-container">
+            
+            <h2>Dashboard</h2>
+            
+            <div class="dashboard-card">
+                <i class="fas fa-user-friends"></i>
+                <span>{{ emp }} Employees</span>
+            </div>
+
+            <div class="dashboard-card">    
+                <i class="fas fa-building"></i>
+                <span>{{ dept }} Departments</span>
+            </div>
+
+            <div class="dashboard-card">
+                <i class="fas fa-briefcase"></i>
+                <span>{{ posi }} Positions</span>
+            </div>
+    </div>
+{% endblock %}

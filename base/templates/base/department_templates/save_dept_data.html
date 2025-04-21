@@ -1,0 +1,17 @@
+{% extends 'nav_bar.html' %}
+
+{% load static %}
+    {% block extra_css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/forms_style.css' %}">
+    {% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Department Form</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ page }}
+        <input type="submit" value="Save" class="btn-submit">
+    </form>
+</div>
+{% endblock %}

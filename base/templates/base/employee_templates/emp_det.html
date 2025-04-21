@@ -1,0 +1,46 @@
+{% extends 'nav_bar.html' %}
+{% load static  %}
+    {% block extra_css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/table_style.css' %}">
+    {% endblock %}
+
+
+    {% block content %}
+    <h1>Details of the employee</h1>
+    <table class="styled-table"> 
+        <tr>
+            <th>Name</th>
+            <th>department</th>
+            <th>position</th>
+            <th>Email</th>
+            <th>Contact no</th>
+            <th>status</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+    {% for i in data %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.department}}</td>
+            <td>{{i.position}}</td>
+            
+            <td>{{i.email}}</td>
+            <td>{{i.contact_number}}</td>
+            {% if i.status %}
+                <td>active</td>
+            {% else %}
+                <td>inactive</td>
+            {% endif %}
+            <td>
+                <a class="btn-update" href="{% url 'update_emp_page' i.id %}">update</a>
+            </td>
+            <td>
+                <a class="btn-delete" href="{% url 'delete_emp_page' i.id %}">delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+        
+    <a  id ='id1' href="{% url 'create_emp' %}">+</a>
+
+    {% endblock %}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Horizontal & Vertical Navbar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* White-Themed Navbar and Content */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9; /* Light background */
+    color: #333333; /* Dark text */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff; /* White background for the navbar */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: top 0.3s;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333333; /* Dark text */
+    padding: 14px 20px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ecf0f1; /* Light grey hover background */
+    color: #16a085; /* Greenish hover text color */
+    border-radius: 5px;
+}
+
+.navbar i {
+    margin-right: 10px;
+    color: #3498db; /* Light blue icon color */
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* Mobile menu button styling */
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333333; /* Dark text for the button */
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+}
+
+/* Mobile navbar links (vertical on mobile) */
+.nav-links.mobile {
+    flex-direction: column;
+    position: fixed;
+    background: #ffffff; /* White background for mobile navbar */
+    top: 0;
+    left: -250px; /* Start off-screen */
+    height: 100%;
+    width: 250px;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.2); /* Light shadow */
+    padding-top: 60px;
+}
+
+.nav-links.mobile a {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0; /* Light grey borders between links */
+    font-size: 18px;
+}
+
+.nav-links.mobile.active {
+    left: 0; /* Bring the sidebar into view */
+}
+
+/* Content styling */
+
+/* Hide mobile menu button on larger screens */
+@media screen and (min-width: 768px) {
+    .open-btn {
+        display: none;
+    }
+
+    .navbar .nav-links {
+        display: flex; /* Keep the horizontal navbar visible */
+    }
+}
+
+/* Show mobile menu button on smaller screens */
+@media screen and (max-width: 768px) {
+    .open-btn {
+        display: block; /* Show the menu button */
+    }
+
+    .navbar .nav-links {
+        display: none; /* Hide horizontal links */
+    }
+}
+
+    </style>
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+
+    <div class="navbar">
+        <button class="open-btn" onclick="toggleMenu()">&#9776;</button> <!-- Mobile menu button -->
+        <div class="nav-links" id="navLinks">
+            <a href="{% url 'index_page' %}"><i class="fas fa-home"></i> Home</a>
+            <a href="{% url 'dash_board' %}"><i class="fas fa-th"></i> Dashboard</a>
+            <a href="{% url 'dept' %}"><i class="fas fa-building"></i> Department</a>
+            <a href="{% url 'position_data' %}"><i class="fas fa-briefcase"></i> Position</a>
+            <a href="{% url 'emp_data' %}"><i class="fas fa-user-friends"></i> Employee</a>
+        </div>
+        <div class="nav-links mobile" id="mobileNavLinks">
+            <a href="javascript:void(0)" onclick="toggleMenu()">Close &times;</a>
+            <a href="{% url 'index_page' %}"><i class="fas fa-home"></i> Home</a>
+            <a href="{% url 'dash_board' %}"><i class="fas fa-th"></i> Dashboard</a>
+            <a href="{% url 'dept' %}"><i class="fas fa-building"></i> Department</a>
+            <a href="{% url 'position_data' %}"><i class="fas fa-briefcase"></i> Position</a>
+            <a href="{% url 'emp_data' %}"><i class="fas fa-user-friends"></i> Employee</a>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        {% block content %}
+            
+        {% endblock %}
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const mobileNavLinks = document.getElementById("mobileNavLinks");
+            if (mobileNavLinks.classList.contains('active')) {
+                mobileNavLinks.classList.remove('active');
+            } else {
+                mobileNavLinks.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>

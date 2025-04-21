@@ -1,0 +1,16 @@
+{% extends 'nav_bar.html' %}
+{% load static %}
+
+    {% block extra_css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/delete_style.css' %}">
+    {% endblock %}
+    {% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3>Are you sure you want to permanently delete the following data?<span class="highlight">{{ data }}</span></h3>
+        
+        <input type="submit" value="Yes, delete it!" class="btn-submit">
+        <a href="{{ request.META.HTTP_REFERER }}" class="btn-go-back">Cancel</a> 
+    </form>
+{% endblock %}
+    

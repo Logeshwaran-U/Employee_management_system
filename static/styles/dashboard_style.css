@@ -1,0 +1,85 @@
+body {
+    background-color: #f4f6f9; 
+    color: #333333; 
+    font-family: Arial, sans-serif;
+}
+.dashboard-container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px; 
+    margin: 100px auto 20px auto; 
+    max-width: 1200px; 
+    background: linear-gradient(145deg, #ffffff, #e6f0fa); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: linear-gradient(135deg, #ffffff, #f9fbfd); /* Light gradient background for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    margin: 15px; /* Space between cards */
+    text-align: center; /* Center text */
+    width: 240px; /* Slightly larger width for the cards */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    display: flex; /* Flexbox for icon and text */
+    align-items: center; /* Center items vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Add hover effect */
+    border: 1px solid #eaeaea; /* Light border for definition */
+}
+
+/* Hover Effect for Cards */
+.dashboard-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient on hover */
+    color: #ffffff; /* Change text color on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+/* Icon Styling */
+.dashboard-card i {
+    font-size: 28px; /* Slightly larger icon size */
+    margin-right: 12px; /* Space between icon and text */
+    color: #3498db; /* Blue color for the icons */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.dashboard-card:hover i {
+    color: #ffffff; /* Change icon color on hover */
+}
+
+/* Card Text Styling */
+.dashboard-card span {
+    font-size: 18px; /* Font size for text */
+    color: #555555; /* Slightly lighter grey for text */
+    font-weight: 600; /* Slightly bolder text */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.dashboard-card:hover span {
+    color: #ffffff; /* Change text color on hover */
+}
+
+/* Heading Styling */
+h2 {
+    text-align: center; /* Center heading */
+    color: #333333; /* Dark grey text for heading */
+    margin-bottom: 20px; /* Space below heading */
+    font-size: 24px; /* Larger heading size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .dashboard-card {
+        width: 100%; /* Make cards full width on small screens */
+        margin: 10px 0; /* Space between full-width cards */
+    }
+
+    .dashboard-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin: 10px; /* Less margin for small devices */
+    }
+}

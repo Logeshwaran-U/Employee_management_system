@@ -1,0 +1,153 @@
+body {
+    background: #ffffff; /* White background */
+    color: #2c3e50; /* Dark gray/black text */
+}
+
+h2 {
+    text-align: center;
+    color: #3498db; /* Blue color for headings */
+}
+
+.form-row {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping for multiple rows */
+    justify-content: space-between; /* Space items evenly */
+    margin-bottom: 20px; /* Space below the row */
+}
+
+.form-group {
+    flex: 0 0 48%; /* Two columns with some space */
+    margin-bottom: 15px; /* Space between form groups */
+}
+.form-container {
+    padding: 20px; /* Padding around the entire form */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limit width to prevent the form from stretching too wide */
+    width: 100%; /* Still full-width for small screens */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin: 100px auto; /* Center the form */
+}
+
+.custom-form {
+    width: 100%; /* Full-width for the form elements */
+    box-sizing: border-box; /* Include padding for form elements */
+}
+
+input, select, textarea {
+    box-sizing: border-box; /* Ensure padding doesn't add to width */
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50; /* Dark gray for label text */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7; /* Light gray border */
+    border-radius: 5px;
+    background: #ecf0f1; /* Light gray background */
+    color: #2c3e50; /* Dark gray text */
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3498db; /* Blue border on focus */
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0; /* Space above and below the button */
+    transition: background-color 0.3s;
+    background: linear-gradient(to right, #1abc9c, #16a085); /* Blue color for submit button */
+}
+
+.btn-submit:hover {
+    background: #2980b9; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .form-group {
+        flex: 0 0 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em; /* Smaller heading on very small screens */
+    }
+
+    .btn-submit {
+        font-size: 14px; /* Smaller button text */
+        padding: 10px; /* Adjust padding for smaller buttons */
+    }
+}
+
+.btn-update,
+.btn-delete,
+.btn-submit {
+    width: 100%; /* Make buttons full width */
+    padding: 12px; /* Larger padding for a better feel */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    color: #ffffff; /* White text */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    margin: 0 5px; /* Space between the buttons */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and scaling */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow for a subtle effect */
+}
+.btn-submit:hover {
+    background: linear-gradient(to right, #16a085, #149f7a); /* Darker teal on hover */
+}
+
+
+.btn-update {
+    background: #3498db; /* Blue color for the update button */
+}
+
+.btn-update:hover {
+    background: #2980b9; /* Darker blue on hover */
+    transform: scale(1.01); /* Slightly enlarge on hover */
+}
+
+/* Action buttons styling */
+.action-buttons {
+    display: flex; /* Align buttons in a row */
+    justify-content: center; /* Center the buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+/* Optional: Adjust action button styles for smaller screens */
+@media (max-width: 600px) {
+    .btn-update,
+    .btn-delete,
+    .btn-submit {
+        width: auto; /* Allow buttons to be smaller on small screens */
+    }
+}
