@@ -9,7 +9,7 @@ class Department(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['-updated', '-created']  # Existing ordering for Department
+        ordering = ['-updated', '-created']  
 
     def __str__(self):
         return self.name
@@ -23,7 +23,7 @@ class PositionList(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['-updated', '-created']  # Existing ordering for PositionList
+        ordering = ['-updated', '-created']  
         unique_together = ('position', 'department')
 
     def __str__(self):
@@ -37,25 +37,24 @@ class EmpList(models.Model):
     ]
 
     COUNTRY_CHOICES = [
-        ('IN', '+91'),  # India
-        ('US', '+1'),   # United States
-        ('AU', '+61'),  # Australia
-        ('CA', '+1'),   # Canada
-        ('UK', '+44'),  # United Kingdom
-        # Add more countries as needed
+        ('IN', '+91'),  
+        ('US', '+1'),   
+        ('AU', '+61'),  
+        ('CA', '+1'),   
+        ('UK', '+44'),  
     ]
 
     name = models.CharField(max_length=255)
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
     birthday = models.DateField()
     email = models.EmailField(unique=True)
-    country_code = models.CharField(max_length=2, choices=COUNTRY_CHOICES)  # Country code
-    contact_number = models.CharField(max_length=15)  # Adjust as necessary
+    country_code = models.CharField(max_length=2, choices=COUNTRY_CHOICES)  
+    contact_number = models.CharField(max_length=15)  
     department = models.ForeignKey(Department,on_delete=models.SET_NULL, null=True, related_name='employees')
     position = models.ForeignKey(PositionList, on_delete=models.SET_NULL, null=True, related_name='employees')
     date_hired = models.DateField()
     monthly_salary = models.DecimalField(max_digits=10, decimal_places=2)
-    status = models.BooleanField(default=True)  # Changed to BooleanField
+    status = models.BooleanField(default=True)  
     created = models.DateTimeField(auto_now_add=True, null=True)
     updated = models.DateTimeField(auto_now=True)
 
