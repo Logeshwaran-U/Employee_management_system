@@ -2,10 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # path('',views.home,name="home"),
-    # path('update/<str:pk>',views.update_pg,name="update_page"),
-    # path('delete/<str:pk>',views.delete_pg,name="delete_page"),
-    # path('home_page',views.home_page,name="home_page"),
     
     path('',views.index_page,name="index_page"),
     
