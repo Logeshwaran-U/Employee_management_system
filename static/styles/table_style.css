@@ -1,134 +1,129 @@
-/* Modern Table Design with Enhanced Font Styling */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; /* Use inbuilt system fonts */
-    background-color: #f5f5f5; /* Light grey background to make the table stand out */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; 
+    background-color: #f5f5f5; 
 }
 
-/* Modern Larger Table Design */
 .styled-table {
-    width: 95%; /* Increase width to occupy more space */
-    max-width: 1200px; /* Restrict max width for large screens */
-    margin: 40px auto 10px auto; /* Added top margin to create space from the navbar */
+    width: 95%; 
+    max-width: 1200px; 
+    margin: 40px auto 10px auto;
     border-spacing: 0;
     border-collapse: collapse;
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark grey text */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Subtle shadow for depth */
-    border-radius: 10px; /* Slightly larger rounded corners for a smooth look */
+    background-color: #ffffff; 
+    color: #333333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); 
+    border-radius: 10px; 
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
-    font-size: 16px; /* Slightly larger font size for better readability */
-    font-weight: 500; /* Medium weight for modern look */
-    letter-spacing: 0.02em; /* Subtle letter-spacing for a clean appearance */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    font-size: 16px; 
+    font-weight: 500; 
+    letter-spacing: 0.02em; 
 }
 
-/* Header Styling */
 .styled-table th {
-    background-color: #34495e; /* Modern slate color */
-    color: #ffffff; /* White text for contrast */
-    padding: 16px 24px; /* Increase padding for better spacing */
+    background-color: #34495e; 
+    color: #ffffff; 
+    padding: 16px 24px; 
     text-transform: uppercase;
-    font-weight: 700; /* Bold font for headers to stand out */
+    font-weight: 700; 
     text-align: left;
-    font-size: 15px; /* Slightly larger header text */
-    letter-spacing: 0.05em; /* Subtle letter spacing for modern look */
-    border-bottom: 2px solid #ddd; /* Thin border for separation */
+    font-size: 15px; 
+    letter-spacing: 0.05em; 
+    border-bottom: 2px solid #ddd; 
 }
 
-/* Body Row Styling */
+
 .styled-table tr:nth-child(even) {
-    background-color: #f8f9fa; /* Very light grey for even rows */
+    background-color: #f8f9fa; 
 }
 
 .styled-table tr:nth-child(odd) {
-    background-color: #ffffff; /* White background for odd rows */
+    background-color: #ffffff; 
 }
 
-/* Cell Styling */
+
 .styled-table td {
-    padding: 16px 24px; /* Increased padding for better readability */
-    color: #555555; /* Soft dark grey for modern, minimalist text */
-    font-size: 15px; /* Adjusted font size for readability */
-    font-weight: 400; /* Regular weight for body text */
-    letter-spacing: 0.01em; /* Small letter spacing for clear, crisp text */
-    border-bottom: 1px solid #ddd; /* Subtle separators */
+    padding: 16px 24px; 
+    color: #555555; 
+    font-size: 15px; 
+    font-weight: 400; 
+    letter-spacing: 0.01em; 
+    border-bottom: 1px solid #ddd; 
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect */
+
 .styled-table tr:hover {
-    background-color: #e9f1f7; /* Light blue tint for hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on row hover */
-    transform: scale(1.02); /* Slight scaling effect on hover */
+    background-color: #e9f1f7; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02); 
 }
 
-/* Button Styling - Modern Gradient Design */
 .btn-update, .btn-delete {
     padding: 10px 18px;
     font-size: 14px;
     color: #ffffff;
     border: none;
-    border-radius: 5px; /* Slightly rounded corners for buttons */
+    border-radius: 5px;
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* Update Button - Gradient Blue */
+
 .btn-update {
-    background: linear-gradient(to right, #42a5f5, #5c6bc0); /* Gradient from blue to purple */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    background: linear-gradient(to right, #42a5f5, #5c6bc0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .btn-update:hover {
-    background: linear-gradient(to right, #1e88e5, #3949ab); /* Darker gradient on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    background: linear-gradient(to right, #1e88e5, #3949ab); 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
 }
 
-/* Delete Button - Gradient Red */
+
 .btn-delete {
-    background: linear-gradient(to right, #ff5f6d, #ff9966); /* Gradient from red to orange */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    background: linear-gradient(to right, #ff5f6d, #ff9966); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .btn-delete:hover {
-    background: linear-gradient(to right, #ff3a50, #ff774c); /* Darker gradient on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    background: linear-gradient(to right, #ff3a50, #ff774c); 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Floating Button Styling */
+
 #id1 {
     display: inline-block;
     padding: 12px 20px;
     font-size: 24px;
-    background: linear-gradient(to right, #43e97b, #38f9d7); /* Gradient green for floating button */
+    background: linear-gradient(to right, #43e97b, #38f9d7); 
     color: white;
-    border-radius: 50%; /* Circular button */
+    border-radius: 50%; 
     text-decoration: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #id1:hover {
-    background: linear-gradient(to right, #31c96b, #2bd9c5); /* Darker gradient on hover */
-    transform: scale(1.1); /* Slight scaling on hover */
+    background: linear-gradient(to right, #31c96b, #2bd9c5);  
+    transform: scale(1.1);
 }
 
-/* Optional: Add media query for responsiveness */
 @media (max-width: 768px) {
     .styled-table th, .styled-table td {
-        padding: 12px 16px; /* Adjust padding for smaller screens */
-        font-size: 13px; /* Smaller text for better fit */
+        padding: 12px 16px; 
+        font-size: 13px; 
     }
 
     #id1 {
         bottom: 20px;
-        right: 20px; /* Adjust floating button for smaller screens */
+        right: 20px; 
     }
 }
