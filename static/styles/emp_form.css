@@ -1,50 +1,50 @@
 body {
-    background: #ffffff; /* White background */
-    color: #2c3e50; /* Dark gray/black text */
+    background: #ffffff;
+    color: #2c3e50;
 }
 
 h2 {
     text-align: center;
-    color: #3498db; /* Blue color for headings */
+    color: #3498db;
 }
 
 .form-row {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping for multiple rows */
-    justify-content: space-between; /* Space items evenly */
-    margin-bottom: 20px; /* Space below the row */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .form-group {
-    flex: 0 0 48%; /* Two columns with some space */
-    margin-bottom: 15px; /* Space between form groups */
+    flex: 0 0 48%;
+    margin-bottom: 15px;
 }
+
 .form-container {
-    padding: 20px; /* Padding around the entire form */
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Limit width to prevent the form from stretching too wide */
-    width: 100%; /* Still full-width for small screens */
-    box-sizing: border-box; /* Include padding in width calculation */
-    margin: 100px auto; /* Center the form */
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 100px auto;
 }
 
 .custom-form {
-    width: 100%; /* Full-width for the form elements */
-    box-sizing: border-box; /* Include padding for form elements */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input, select, textarea {
-    box-sizing: border-box; /* Ensure padding doesn't add to width */
+    box-sizing: border-box;
 }
-
 
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #2c3e50; /* Dark gray for label text */
+    color: #2c3e50;
 }
 
 input[type="text"],
@@ -55,12 +55,12 @@ select,
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #bdc3c7; /* Light gray border */
+    border: 1px solid #bdc3c7;
     border-radius: 5px;
-    background: #ecf0f1; /* Light gray background */
-    color: #2c3e50; /* Dark gray text */
+    background: #ecf0f1;
+    color: #2c3e50;
     transition: border-color 0.3s;
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box;
 }
 
 input[type="text"]:focus,
@@ -69,7 +69,7 @@ input[type="date"]:focus,
 input[type="number"]:focus,
 select:focus,
 textarea:focus {
-    border-color: #3498db; /* Blue border on focus */
+    border-color: #3498db;
     outline: none;
 }
 
@@ -81,73 +81,70 @@ textarea:focus {
     color: #ffffff;
     font-size: 16px;
     cursor: pointer;
-    margin: 20px 0; /* Space above and below the button */
+    margin: 20px 0;
     transition: background-color 0.3s;
-    background: linear-gradient(to right, #1abc9c, #16a085); /* Blue color for submit button */
+    background: linear-gradient(to right, #1abc9c, #16a085);
 }
 
 .btn-submit:hover {
-    background: #2980b9; /* Darker blue on hover */
+    background: #2980b9;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .form-group {
-        flex: 0 0 100%; /* Full width on smaller screens */
+        flex: 0 0 100%;
     }
 }
 
 @media (max-width: 480px) {
     h2 {
-        font-size: 1.5em; /* Smaller heading on very small screens */
+        font-size: 1.5em;
     }
 
     .btn-submit {
-        font-size: 14px; /* Smaller button text */
-        padding: 10px; /* Adjust padding for smaller buttons */
+        font-size: 14px;
+        padding: 10px;
     }
 }
 
 .btn-update,
 .btn-delete,
 .btn-submit {
-    width: 100%; /* Make buttons full width */
-    padding: 12px; /* Larger padding for a better feel */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    color: #ffffff; /* White text */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor */
-    margin: 0 5px; /* Space between the buttons */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and scaling */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow for a subtle effect */
-}
-.btn-submit:hover {
-    background: linear-gradient(to right, #16a085, #149f7a); /* Darker teal on hover */
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.btn-submit:hover {
+    background: linear-gradient(to right, #16a085, #149f7a);
+}
 
 .btn-update {
-    background: #3498db; /* Blue color for the update button */
+    background: #3498db;
 }
 
 .btn-update:hover {
-    background: #2980b9; /* Darker blue on hover */
-    transform: scale(1.01); /* Slightly enlarge on hover */
+    background: #2980b9;
+    transform: scale(1.01);
 }
 
-/* Action buttons styling */
 .action-buttons {
-    display: flex; /* Align buttons in a row */
-    justify-content: center; /* Center the buttons */
-    margin-top: 20px; /* Space above the buttons */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-/* Optional: Adjust action button styles for smaller screens */
 @media (max-width: 600px) {
     .btn-update,
     .btn-delete,
     .btn-submit {
-        width: auto; /* Allow buttons to be smaller on small screens */
+        width: auto;
     }
 }
