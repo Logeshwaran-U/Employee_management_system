@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from . models import Department,PositionList,EmpList
 from . forms import dep_reg,position_reg,emp_reg
 
-# Create your views here.
 def index_page(request):
     return render(request,'main_home.html')
 
@@ -14,7 +13,7 @@ def dashboard(request):
     return render(request,'dashboard_count.html',context)
 
 
-#departments
+
 
 def dept_data(request):
     data = Department.objects.all()
@@ -52,7 +51,7 @@ def create_dept(request):
     context ={'page':form}
     return render(request,'base/department_templates/save_dept_data.html',context)
 
-#postions
+
 
 
 
@@ -96,7 +95,6 @@ def delete_posi(request,pk):
     return render(request,'base/postion_templates/delete_posi.html',context)
 
 
-#employee
 
 def emp_data(request):
     data = EmpList.objects.all()
