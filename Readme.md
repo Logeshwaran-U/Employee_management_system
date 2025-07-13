@@ -65,5 +65,5 @@ Then log in at: `/admin`
 
 ## 👤 Author
 
-**Logeshwaran U**
+**Logeshwaran U**  
 If you found this project helpful, feel free to give it a ⭐
